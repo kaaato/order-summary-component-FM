@@ -92,6 +92,8 @@ p {
   font-size: 1rem;
   padding: 4.375em 1.5em;
   text-align: center;
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -216,6 +218,13 @@ p {
   .box-small__button {
     grid-row: 1 / span 2;
     justify-self: end;
+  }
+}
+
+@media (min-width: 23.4375em) {
+  .page {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-position: top;
   }
 }
 
