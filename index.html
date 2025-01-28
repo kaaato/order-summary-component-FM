@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Order summary card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css"/>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+  <body class="page">
+    <header class="visually-hidden">
+      <h1>Frontend Mentor</h1>
+    </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <main class="main">
+      <div class="media">
+        <img class="media__img" src="./images/illustration-hero.svg" alt="You will enjoy our audio service"/>
+      </div>
+      
+      <section class="box">
+        <h2 class="box__title">Order Summary</h2>
+        <p class="box__text">
+          You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+        <section class="box-small">
+          <img class="box-small__img" src="./images/icon-music.svg" alt="" />
+          <h3 class="box-small__title">Annual Plan</h3>
+          <p class="box-small__text">$59.99/year</p>
+          <button class="box-small__button button" type="button">Change</button>
+        </section>
+        <button class="box__button--proceed button" type="button">Proceed to Payment</button>
+        <button class="box__button--cancel button" type="button">Cancel Order</button>      
+      </section>
 
-  Order Summary
+    </main>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/kaaato" target="_blank">kaaato</a>.
+      </p>
+    </footer>
 
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>

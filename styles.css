@@ -1,0 +1,236 @@
+:root {
+  --page-color: hsl(225, 100%, 94%);
+  --box-color: hsl(0, 0%, 100%);
+  --box-small-color: hsl(225, 100%, 98%);
+  --button-proceed-color: hsl(245, 75%, 52%);
+  --ink-light-color: hsl(224, 23%, 55%);
+  --ink-dark-color: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+}
+
+img, picture, svg {
+  block-size: auto;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+ul, ol { 
+  list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+.visually-hidden:not(:focus):not(:active) { 
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+p {
+  color: var(--ink-light-color);
+  font-weight: 500;
+}
+
+:is(h2, h3) {
+  color: var(--ink-dark-color);
+}
+
+.button {
+  border: none;
+  font-weight: 900;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.page {
+  font-family: "Red Hat Display";
+  background-color: var(--page-color);
+  font-size: 1rem;
+  padding: 4.375em 1.5em;
+  text-align: center;
+}
+
+.main {
+  max-width: 28.125rem;
+  background-color: var(--box-color);
+  border-radius: 15px;
+  container-type: inline-size;
+}
+
+.media__img {
+  border-radius: 15px 15px 0 0;
+}
+
+.box {
+  padding: clamp(2em, -0.134em + 9.106vw, 2.7em) clamp(1.5em, -3.073em + 19.512vw, 3em);
+}
+
+.box__title {
+  font-size: clamp(1.375rem, 0.232rem + 4.878vw, 1.75rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.box__text {
+  max-width: 25ch;
+  margin: 0 auto 1.5rem;
+  font-weight: 700;
+}
+
+.box-small {
+  background-color: var(--box-small-color);
+  border-radius: 10px;
+  margin-bottom: clamp(1.5rem, -0.024rem + 6.504vw, 2rem);
+}
+
+.box-small__img {
+  margin: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.box-small__title {
+  font-size: clamp(0.875rem, 0.302rem + 2.446vw, 1.063rem);
+  font-weight: 900;
+}
+
+.box-small__text {
+  font-size: clamp(0.875rem, 0.302rem + 2.446vw, 1.063rem);
+  font-weight: 700;
+}
+
+.box-small__button {
+  font-size: clamp(0.813rem, 0.624rem + 0.807vw, 0.875rem);
+  text-decoration-line: underline;
+  background-color: inherit;
+  color: var(--button-proceed-color);
+}
+
+.box-small__button:hover {
+  text-decoration-line: none;
+  filter: opacity(.5);
+}
+
+.box__button--proceed {
+  display: block;
+  min-width: 100%;
+  min-height: 3.125rem;
+  background-color: var(--button-proceed-color);
+  color: var(--box-color);
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  margin-bottom: clamp(1.4rem, 0.18rem + 5.203vw, 1.8rem);
+}
+
+.box__button--proceed:hover {
+  filter: opacity(.5);
+}
+
+.box__button--cancel {
+  font-size: 0.9375rem;
+  color: var(--ink-light-color);
+  background-color: var(--box-color);
+}
+
+.box__button--cancel:hover {
+  color: var(--ink-dark-color);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 21.875em) {
+  .box-small {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: clamp(1em, -0.524em + 6.504vw, 1.5em);
+    align-items: center;
+  }
+
+  .box-small__img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .box-small__title {
+    justify-self: start;
+  }
+
+  .box-small__text {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .box-small__button {
+    grid-row: 1 / span 2;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 31.125em) {
+  .page {
+    padding: clamp(4.375em, -1.723em + 26.016vw, 6.375em) 0;
+  }
+
+  .main {
+    margin: 0 auto;
+  }
+}
+
+@container (min-width: 28.125em) {
+  .box__text {
+    max-width: 30ch;
+  }
+}
